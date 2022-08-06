@@ -126,7 +126,7 @@ async def cbstart(_, query: CallbackQuery):
 
 @bot.on_message(filters.command("alive") & filters.user(Config.BOT_OWNER))
 async def live(client: Client, message: Message):
-    livemsg = await message.reply_text('`{Config.BOT_OWNER} Merhaba Sahip Bey 🖤`')
+    livemsg = await message.reply_text('`𖥂 𝐓𝐓𝐊 ϟ𓆩،͜͡𓆩،͜͡ ͢𝐀𝐥𝐢𝐠𝐧𝐚𝐤 ♰ Merhaba Sahip Bey 🖤`')
 
 
 
