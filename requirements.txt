@@ -1,1 +1,10 @@
+TgCrypto
+pyrogram==1.4.16
+youtube-dl
+youtube_search
+requests
+yt_dlp
+ffmpeg
+lyricsgenius
+wget
 
