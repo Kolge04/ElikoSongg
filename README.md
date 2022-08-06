@@ -1,7 +1,7 @@
 <h2 align="centre">Muud mp3 download 🎵</h2>
 
 <p align="center">
-  <img src="https://telegra.ph//file/4c86190fcbe14428c8c6b.jpg">
+  <img src="https://telegra.ph/file/41021f3147d90758416fb.jpg">
 </p> 
 
 ### Gerekli olanlar 🍭
@@ -15,7 +15,7 @@
 - GROUP - Grubunuzun kullanıcı adı
 
 # Deploy
-<a href="https://heroku.com/deploy?template=https://github.com/Gecekus/musicdowload">
+<a href="https://heroku.com/deploy?template=https://github.com/Cinaar/Mp3Geceku-u.git">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 
