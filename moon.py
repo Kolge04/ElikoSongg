@@ -52,16 +52,16 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "📚 Komutlar" , callback_data= "cbbilgi"
+                        "🔧 Əmrlər" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
-                        "💭 Sohbet Grubu",
-                        url=f"https://t.me/Sohbetikumsal"
+                        "Blog 🌴",
+                        url=f"https://t.me/BlogOfQuliyev"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🏮 Owner",
+                        "🧑🏻‍💻 Owner",
                         url=f"https://t.me/{Config.BOT_OWNER}"
                     )
                     
@@ -103,16 +103,16 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "📚 Komutlar" , callback_data= "cbbilgi"
+                        "🔧 Əmrlər" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
-                        "💭 Sohbet Grubu",
-                        url=f"https://t.me/Sohbetikumsal"
+                        "Blog 🌴",
+                        url=f"https://t.me/BlogOfQuliyev"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🏮 Owner",
+                        "🧑🏻‍💻 Owner",
                         url=f"https://t.me/{Config.BOT_OWNER}"
                     )
                     
@@ -133,7 +133,7 @@ async def live(client: Client, message: Message):
   
 #music indirme#
 
-@bot.on_message(filters.command("bul") & ~filters.edited)
+@bot.on_message(filters.command("song") & ~filters.edited)
 def bul(_, message):
     query = " ".join(message.command[1:])
     m = message.reply("<b>Şarkınız Aranıyor ... 🔍</b>")
