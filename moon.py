@@ -32,21 +32,21 @@ bot = Client(
 #start mesajı
 
 @bot.on_message(
-    filters.command(["start", "orispi"]) & filters.private & ~filters.edited
+    filters.command(["start", "raven"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgIAAxkBAAJAhWLeod8v1WIFu0_xulGE8dxkW7StAAJ6AQACEBptIpydt0hO73LeKQQ")
     await message.reply_text(
-        f"""**Merhaba {message.from_user.mention} 🎵\nBen müzik indirme botuyum !\n
-● **Sizin yerinize müzik indirebilirim.**
+        f"""**Salam {message.from_user.mention} 🎵\nMən medusa!\n
+● **Sənin üçün YouTube və digər platformalardan musiqi yükləmək üçün yaradılmışam.**
 
-● **Komutları görmek için komutlar butonuna basınız.**
+● **Əmrləri görmək üçün tıkla.**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "♬ Playlist", 
+                        " Playlist ✨", 
                         url=f"https://t.me/{Config.PLAYLIST_NAME}"
                     )
                 ],
@@ -81,7 +81,7 @@ async def cbbilgi(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "🏠 Ana Sayfa", callback_data="cbstart")
+                         "Ana Səhifə", callback_data="cbstart")
                  ] 
              ]
          )
@@ -97,7 +97,7 @@ async def cbstart(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "♬ Playlist", 
+                        " Playlist ✨", 
                         url=f"https://t.me/{Config.PLAYLIST_NAME}"
                     )
                 ],
@@ -126,7 +126,7 @@ async def cbstart(_, query: CallbackQuery):
 
 @bot.on_message(filters.command("alive") & filters.user(Config.BOT_OWNER))
 async def live(client: Client, message: Message):
-    livemsg = await message.reply_text('`𖥂 𝐓𝐓𝐊 ϟ𓆩،͜͡𓆩،͜͡ ͢𝐀𝐥𝐢𝐠𝐧𝐚𝐤 ♰ Merhaba Sahip Bey 🖤`')
+    livemsg = await message.reply_text('` Merhaba Sahip Bey 🖤`')
 
 
 
