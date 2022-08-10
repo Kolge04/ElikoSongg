@@ -15,7 +15,7 @@
 - GROUP - Grubunuzun kullanıcı adı
 
 # Deploy
-<a href="https://heroku.com/deploy?template=https://github.com/Cinaar/Mp3Geceku-u.git">
+<a href="https://heroku.com/deploy?template=https://github.com/qulievv/music.git">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 
