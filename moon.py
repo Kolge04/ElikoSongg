@@ -76,7 +76,7 @@ async def start_(client: Client, message: Message):
 
 @bot.on_callback_query(filters.regex("cbbilgi"))
 async def cbbilgi(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Selam {query.from_user.mention}!\nBu botun komutlar menüsü 💝\n\n ● /bul - Müzik ismi veya YouTube linki (müzik indirme)\n\n● /lyrics - Şarkı ismi (şarkı sözleri)\n\n● /video - Video ismi veya YouTube linki (video indirme)\n\n</b>""",
+    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun əmrlər menyusu..🔧\n\n ● /song - Musiqi adı vəya YouTube linki (musiqi yükləmə)\n\n● /lyrics - Musiqi adı (mahnı sözləri)\n\n● /video - Video adı vəya YouTube linki (video yükləmə)\n\n</b>""",
     reply_markup=InlineKeyboardMarkup(
              [
                  [
@@ -92,7 +92,7 @@ async def cbbilgi(_, query: CallbackQuery):
 
 @bot.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**Merhaba {query.from_user.mention} 🎵\nBen müzik indirme botuyum !\n\n● **Sizin yerinize müzik indirebilirim.**\n\n● **Komutları görmek için komutlar butonuna basınız.**""",
+    await query.edit_message_text(f"""**Salam {query.from_user.mention} 🎵\nMən Medusa !\n\n● **YouTube üzərindən musiqi yükləmə botu.**\n\n● **İstifadə qaydası üçün Əmrlər menyusunu açın.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -126,7 +126,7 @@ async def cbstart(_, query: CallbackQuery):
 
 @bot.on_message(filters.command("alive") & filters.user(Config.BOT_OWNER))
 async def live(client: Client, message: Message):
-    livemsg = await message.reply_text('` Merhaba Sahip Bey 🖤`')
+    livemsg = await message.reply_text('`{Config.BOT_OWNER} Salamlar Sahibim..🖤`')
 
 
 
@@ -136,7 +136,7 @@ async def live(client: Client, message: Message):
 @bot.on_message(filters.command("song") & ~filters.edited)
 def bul(_, message):
     query = " ".join(message.command[1:])
-    m = message.reply("<b>Şarkınız Aranıyor ... 🔍</b>")
+    m = message.reply("<b>Sorğunuz axtarılır ... 🔍</b>")
     ydl_ops = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -149,27 +149,27 @@ def bul(_, message):
         duration = results[0]["duration"]
 
     except Exception as e:
-        m.edit("<b>❌ Üzgünüm şarkı bulunamadı.\n\n Lütfen başka şarkı ismi söyleyin.</b>")
+        m.edit("<b>❌ Xəta! Musiqini tapa bilmədim.\n\n Zəhmət olmasa daha dəqiq məlumat verin.</b>")
         print(str(e))
         return
-    m.edit("<b>📥 İndirme İşlemi Başladı...</b>")
+    m.edit("<b>📥 Yüklənir...</b>")
     try:
         with yt_dlp.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"**╭───────────────**\n**├▷ ♬ Başlık: [{title[:35]}]({link})**\n**├───────────────**\n**├▷♬ Playlist @{Config.PLAYLIST_NAME}**\n**╰───────────────**"
-        res = f"**╭───────────────**\n**├▷ ♬ Başlık: [{title[:35]}]({link})**\n**├───────────────**\n**├▷👤 İsteyen** [{message.from_user.first_name}](tg://user?id={message.from_user.id})\n**├───────────────**\n**├▷🌀 Bot: @{Config.BOT_USERNAME}**\n**╰───────────────**"
+        rep = f"**╭───────────────**\n**├▷ ♬ Başlıq: [{title[:35]}]({link})**\n**├───────────────**\n**├▷ Playlist 🌴 @{Config.PLAYLIST_NAME}**\n**╰───────────────**"
+        res = f"**╭───────────────**\n**├▷ ♬ Başlıq: [{title[:35]}]({link})**\n**├───────────────**\n**├▷👤 İstəyən** [{message.from_user.first_name}](tg://user?id={message.from_user.id})\n**├───────────────**\n**├▷⚡️ Bot: @{Config.BOT_USERNAME}**\n**╰───────────────**"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
-        m.edit("📤 Yükleniyor..")
-        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="@mutsuz_panda")
+        m.edit("📤 Göndərilir..")
+        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="Medusa_Song")
         m.delete()
-        bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=res, performer="@mutsuz_panda", parse_mode='md', title=title, duration=dur, thumb=thumb_name)
+        bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=res, performer="Medusa_Song", parse_mode='md', title=title, duration=dur, thumb=thumb_name)
     except Exception as e:
-        m.edit("<b>❌ Hatanın, düzelmesini bekleyiniz.</b>")
+        m.edit("<b>❌ Xəta düzələnə qədər gözləyin..</b>")
         print(e)
 
     try:
@@ -183,15 +183,15 @@ def bul(_, message):
 @bot.on_message(filters.command("lyrics") & ~filters.edited)
 async def get_lyric_genius(_, message: Message):
     if len(message.command) < 2:
-        return await message.reply_text("**ᴋᴜʟʟᴀɴɪᴍ:**\n\n/lyrics (Şarkı adı)")
-    m = await message.reply_text("🔍 Şarkı sözleri aranıyor ...")
+        return await message.reply_text("**işlədilişi:**\n\n/lyrics (Mahnı adı)")
+    m = await message.reply_text("🔍 Mahnı sözləri axtarılır ...")
     query = message.text.split(None, 1)[1]
     x = "OXaVabSRKQLqwpiYOn-E4Y7k3wj-TNdL5RfDPXlnXhCErbcqVvdCF-WnMR5TBctI"
     y = lyricsgenius.Genius(x)
     y.verbose = False
     S = y.search_song(query, get_full_info=False)
     if S is None:
-        return await m.edit("❌ `404` Şarkı sözleri bulunamadı")
+        return await m.edit("❌ `404` Mahnı sözləri tapılmadı..")
     xxx = f"""
 **sᴀʀᴋɪ:** {query}
 **sᴀɴᴀᴛᴄɪ:** {S.artist}
@@ -242,14 +242,14 @@ async def vsong(client, message):
     except Exception as e:
         print(e)
     try:
-        msg = await message.reply("📥 **video indiriyorum...**")
+        msg = await message.reply("📥 **video yüklənir...**")
         with YoutubeDL(ydl_opts) as ytdl:
             ytdl_data = ytdl.extract_info(link, download=True)
             file_name = ytdl.prepare_filename(ytdl_data)
     except Exception as e:
-        return await msg.edit(f"🚫 **Hata:** {e}")
+        return await msg.edit(f"🚫 **Xəta:** {e}")
     preview = wget.download(thumbnail)
-    await msg.edit("📤 **video yüklüyorum...**")
+    await msg.edit("📤 **video göndərilir...**")
     await message.reply_video(
         file_name,
         duration=int(ytdl_data["duration"]),
