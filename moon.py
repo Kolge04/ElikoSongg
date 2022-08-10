@@ -35,7 +35,7 @@ bot = Client(
     filters.command(["start", "raven"]) & filters.private & ~filters.edited
 )
 async def start_(client: Client, message: Message):
-    await message.reply_sticker("CAACAgIAAxkBAAJAhWLeod8v1WIFu0_xulGE8dxkW7StAAJ6AQACEBptIpydt0hO73LeKQQ")
+    await message.reply_sticker("CAACAgIAAxkBAAFQmQABYvQfJR6i6yqB3kYZGUvCDrI8c2QAAn4FAALSWogBauDUxjcpjiApBA")
     await message.reply_text(
         f"""**Salam {message.from_user.mention} 🎵\nMən medusa!\n
 ● **Sənin üçün YouTube və digər platformalardan musiqi yükləmək üçün yaradılmışam.**
