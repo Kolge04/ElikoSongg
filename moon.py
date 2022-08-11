@@ -165,9 +165,9 @@ def bul(_, message):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
         m.edit("📤 Göndərilir..")
-        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="Medusa_Song")
+        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="ᴍᴇᴅᴜsᴀ")
         m.delete()
-        bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=res, performer="Medusa_Song", parse_mode='md', title=title, duration=dur, thumb=thumb_name)
+        bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=res, performer="ᴍᴇᴅᴜsᴀ", parse_mode='md', title=title, duration=dur, thumb=thumb_name)
     except Exception as e:
         m.edit("<b>❌ Xəta düzələnə qədər gözləyin..</b>")
         print(e)
