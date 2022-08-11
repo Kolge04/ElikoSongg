@@ -7,8 +7,8 @@
         "Music",
         "Bot"
     ],
-    "repository": "https://github.com/Gecekus/musicdowload",
-    "success_url": "https://github.com/Gecekus/musicdowload",
+    "repository": "https://github.com/qulievv/music",
+    "success_url": "https://github.com/qulievv/music",
     "image": "heroku/python",
     "formation": {
         "worker": {
