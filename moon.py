@@ -37,10 +37,10 @@ bot = Client(
 async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgIAAxkBAAFQmQABYvQfJR6i6yqB3kYZGUvCDrI8c2QAAn4FAALSWogBauDUxjcpjiApBA")
     await message.reply_text(
-        f"""**Salam {message.from_user.mention} 🎵\nMən medusa!\n
+        f"""**Salam {message.from_user.mention} 🎵\nMən Medusa!\n
 ● **Sənin üçün YouTube və digər platformalardan musiqi yükləmək üçün yaradılmışam.**
 
-● **Əmrləri görmək üçün tıkla.**
+● **İşlətmə qaydasını görmək üçün əmrlər butonuna tıkla.**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -122,11 +122,11 @@ async def cbstart(_, query: CallbackQuery):
         ), 
     ) 
 
-#alive mesaji#
+#alive mesajı#
 
 @bot.on_message(filters.command("alive") & filters.user(Config.BOT_OWNER))
 async def live(client: Client, message: Message):
-    livemsg = await message.reply_text('`{Config.BOT_OWNER} Salamlar Sahibim..🖤`')
+    livemsg = await message.reply_text('{message.from_user.mention} Salamlar Sahibim..🖤')
 
 
 
