@@ -87,7 +87,7 @@ async def cbbilgi(_, query: CallbackQuery):
          )
          )
 
-# ~~~~~~~~~~~~~~~~~~~~~~ gece kuşu ~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~ MEDUSA SONG ~~~~~~~~~~~~~~~~~~~~~~
 
 
 @bot.on_callback_query(filters.regex("cbstart"))
@@ -126,7 +126,7 @@ async def cbstart(_, query: CallbackQuery):
 
 @bot.on_message(filters.command("alive") & filters.user(Config.BOT_OWNER))
 async def live(client: Client, message: Message):
-    livemsg = await message.reply_text('@quliyevv_17 Salamlar Sahibim..🖤')
+    livemsg = await message.reply_text('message.from_user.mention Aktivəm Sahibim..⚡️')
 
 
 
