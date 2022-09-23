@@ -46,22 +46,22 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        " Playlist ✨", 
+                        " ᴘʟᴀʏʟɪ̇sᴛ ✨", 
                         url=f"https://t.me/{Config.PLAYLIST_NAME}"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔧 Əmrlər" , callback_data= "cbbilgi"
+                        "🔧 əᴍʀʟəʀ" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
-                        "Blog 🌴",
-                        url=f"https://t.me/BlogOfQuliyev"
+                        "ʙʟᴏɢ 🌴",
+                        url=f"https://t.me/Nixhadx"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🧑🏻‍💻 Owner",
+                        "🧑🏻‍💻 ᴏᴡɴᴇʀ",
                         url=f"https://t.me/{Config.BOT_OWNER}"
                     )
                     
@@ -87,7 +87,7 @@ async def cbbilgi(_, query: CallbackQuery):
          )
          )
 
-# ~~~~~~~~~~~~~~~~~~~~~~ MEDUSA SONG ~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~ Poseidon song ~~~~~~~~~~~~~~~~~~~~~~
 
 
 @bot.on_callback_query(filters.regex("cbstart"))
@@ -97,7 +97,7 @@ async def cbstart(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        " Playlist ✨", 
+                        " ᴘʟᴀʏʟɪ̇sᴛ ✨", 
                         url=f"https://t.me/{Config.PLAYLIST_NAME}"
                     )
                 ],
@@ -106,13 +106,13 @@ async def cbstart(_, query: CallbackQuery):
                         "🔧 Əmrlər" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
-                        "Blog 🌴",
-                        url=f"https://t.me/BlogOfQuliyev"
+                        "ʙʟᴏɢ 🌴",
+                        url=f"https://t.me/Nixhadx"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🧑🏻‍💻 Owner",
+                        "🧑🏻‍💻 ᴏᴡɴᴇʀ",
                         url=f"https://t.me/{Config.BOT_OWNER}"
                     )
                     
@@ -165,7 +165,7 @@ def bul(_, message):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
         m.edit("📤 Göndərilir..")
-        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="ᴍᴇᴅᴜsᴀ")
+        message.reply_audio(audio_file, caption=rep, parse_mode='md',quote=False, title=title, duration=dur, thumb=thumb_name, performer="ᴘᴏsᴇɪ̇ᴅᴏɴ")
         m.delete()
         bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=res, performer="ᴍᴇᴅᴜsᴀ", parse_mode='md', title=title, duration=dur, thumb=thumb_name)
     except Exception as e:
