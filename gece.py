@@ -45,9 +45,9 @@ async def start(event):
                       [
                        Button.inline("🎛 Əmrlər", data="komutlar")
                       ],
-                      [Button.url('🌱 Məni qrupa əlavə et', f'https://t.me/Sofi_Tag_Bot?startgroup=a')],
-                      [Button.url('🤖 Digər Botlar', f'https://t.me/Rahid_44'),
-                       Button.url('🙇🏻‍♀️ Sahibə', f'https://t.me/Avaraqizdidaa')]
+                      [Button.url('🌱 Məni qrupa əlavə et', f'https://t.me/PoseidonSongRobot?startgroup=a')],
+                      [Button.url('🤖 Digər Botlar', f'https://t.me/Nixhaad'),
+                       Button.url('🐊 Sahib', f'https://t.me/Nixhadj')]
                     ),
                     link_preview=False)
 
@@ -64,9 +64,9 @@ async def handler(event):
                       [
                        Button.inline("🎛 əmrlər", data="komutlar")
                       ],
-                      [Button.url('🌱 Məni qrupa əlavə et', f'https://t.me/Sofi_Tag_Bot?startgroup=a')],
-                      [Button.url('🤖 Digər Botlar', f'https://t.me/Rahid_44'),
-                       Button.url('🙇🏻‍♀️ Sahibə', f'https://t.me/Avaraqizdidaa')]
+                      [Button.url('🌱 Məni qrupa əlavə et', f'https://t.me/PoseidonSongRobot?startgroup=a')],
+                      [Button.url('🤖 Digər Botlar', f'https://t.me/Nixhaad'),
+                       Button.url('🐊 Sahib', f'https://t.me/Nixhadj')]
                     ),
                     link_preview=False)
 
@@ -110,7 +110,7 @@ async def mentionall(event):
     await client.send_message(event.chat_id, "❄️ User tağ prosesi başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
-                      Button.url('🤖 Digər Botlar', f'https://t.me/Rahid_44')
+                      Button.url('🤖 Digər Botlar', f'https://t.me/Nixhaad')
                       ]
                     )
                   ) 
@@ -124,7 +124,7 @@ async def mentionall(event):
         await event.respond("⛔ Tağ prosesi dayandırıldı",
                     buttons=(
                       [
-                       Button.url('🤖 Digər Botlar', f'https://t.me/Rahid_44')
+                       Button.url('🤖 Digər Botlar', f'https://t.me/Nixhaad')
                       ]
                     )
                   )
@@ -169,7 +169,7 @@ async def mentionalladmin(event):
     await client.send_message(event.chat_id, "❄️ Admin tağ prosesi başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
-                       Button.url('🤖 Digər Botlar', f'https://t.me/Rahid_44')
+                       Button.url('🤖 Digər Botlar', f'https://t.me/Nixhaad')
                       ]
                     )
                   ) 
@@ -183,7 +183,7 @@ async def mentionalladmin(event):
         await event.respond("⛔ Admin tağ prosesi dayandırıldı",
                     buttons=(
                       [
-                       Button.url('🤖 Digər Botlar', f'https://t.me/Rahid_44')
+                       Button.url('🤖 Digər Botlar', f'https://t.me/Nixhaad')
                       ]
                     )
                   )
@@ -228,7 +228,7 @@ async def tektag(event):
     await client.send_message(event.chat_id, "❄️ Tək-Tək tağ prosesi başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
-                       Button.url('🤖 Digər Botlar', f'https://t.me/Rahid_44')
+                       Button.url('🤖 Digər Botlar', f'https://t.me/Nixhaad')
                       ]
                     )
                   ) 
@@ -242,7 +242,7 @@ async def tektag(event):
         await event.respond("⛔ Tək-Tək tağ prosesi dayandırıldı",
                     buttons=(
                       [
-                       Button.url('🤖 Digər Botlar', f'https://t.me/Rahid_44')
+                       Button.url('🤖 Digər Botlar', f'https://t.me/Nixhaad')
                       ]
                     )
                   )
@@ -300,7 +300,7 @@ async def etag(event):
     await client.send_message(event.chat_id, "❄️ Emoji ilə tağ prosesi başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
-                       Button.url('🤖 Digər Botlar', f'https://t.me/Rahid_44')
+                       Button.url('🤖 Digər Botlar', f'https://t.me/Nixhaad')
                       ]
                     )
                   ) 
@@ -314,7 +314,7 @@ async def etag(event):
         await event.respond("⛔ Emoji tağ prosesi dayandırıldı",
                     buttons=(
                       [
-                       Button.url('🤖 Digər Botlar', f'https://t.me/Rahid_44')
+                       Button.url('🤖 Digər Botlar', f'https://t.me/Nixhaad')
                       ]
                     )
                   )
@@ -390,7 +390,7 @@ async def stag(event):
     await client.send_message(event.chat_id, "❄️ Sözlərlə tağ prosesi başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
-                       Button.url('🤖 Digər Botlar', f'https://t.me/Rahid_44')
+                       Button.url('🤖 Digər Botlar', f'https://t.me/Nixhaad')
                       ]
                     )
                   ) 
@@ -404,7 +404,7 @@ async def stag(event):
         await event.respond("⛔ Söz ilə tağ prosesi dayandırıldı",
                     buttons=(
                       [
-                       Button.url('🤖 Digər Botlar', f'https://t.me/Rahid_44')
+                       Button.url('🤖 Digər Botlar', f'https://t.me/Nixhaad')
                       ]
                     )
                   )
@@ -464,7 +464,7 @@ async def rtag(event):
         await event.respond("⛔ Rəngli tağ prosesi dayandırıldı",
                     buttons=(
                       [
-                       Button.url('🤖 Digər Botlar', f'https://t.me/Rahid_44')
+                       Button.url('🤖 Digər Botlar', f'https://t.me/Nixhaad')
                       ]
                     )
                   )
@@ -482,6 +482,6 @@ async def rtag(event):
 
 
 
-print(">> Bot işlək vəziyyətdədir 🚀 əlaqə üçün @Rahid_2003 <<")
+print(">> Bot işlək vəziyyətdədir 🚀 əlaqə üçün @Nixhadj <<")
 client.run_until_disconnected()
 run_until_disconnected()
