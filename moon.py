@@ -56,7 +56,7 @@ async def start_(client: Client, message: Message):
                     ),
                     InlineKeyboardButton(
                         "ʙʟᴏɢ 🌴",
-                        url=f"https://t.me/Nixhadx"
+                        url=f"https://t.me/Nixhaad"
                     )
                 ],
                 [
@@ -107,7 +107,7 @@ async def cbstart(_, query: CallbackQuery):
                     ),
                     InlineKeyboardButton(
                         "ʙʟᴏɢ 🌴",
-                        url=f"https://t.me/Nixhadx"
+                        url=f"https://t.me/Nixhaad"
                     )
                 ],
                 [
