@@ -19,7 +19,7 @@
     "env": {
         "API_ID": {
             "description": "my.telegram.org dan ala bilirsiniz.",
-            "value": "",
+            "value": "14965050",
             "required": true
         },
         "API_HASH": {
