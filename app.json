@@ -24,32 +24,32 @@
         },
         "API_HASH": {
             "description": "my.telegram.org dan ala bilirsiniz.",
-            "value": "",
+            "value": "38bab2dab10fc1b6a9ba0bf683fd7048",
             "required": true
         },
         "BOT_TOKEN": {
             "description": "@Botfather botundan ala bilirsiniz.",
-            "value": "",
+            "value": "6344855563:AAER4AWp7vs2vsWJbVXApq-Pb9stw2uf-C0",
             "required": true
         },
         "PLAYLIST_NAME": {
             "description": "Playlist kanalının kullanıcı adını @ bu işareti olmadan yazın.",
-            "value": "",
+            "value": "𝙀𝙡𝙞𝙠𝙤 𝙋𝙡𝙖𝙮𝙡𝙞𝙨𝙩",
             "required": true
         },
         "PLAYLIST_ID": {
             "description": "Playlist kanalının ID-ni yazın.",
-            "value": "",
+            "value": "-1001822732870",
             "required": true
         },
         "BOT_OWNER": {
             "description": "Kendi kullanıcı adınızı @ bu işareti olmadan yazın.",
-            "value": "",
+            "value": "ElikoAndMee",
             "required": true
         },
         "BOT_USERNAME": {
             "description": "Botun kullanıcı adını @ bu işareti olmadan yazın.",
-            "value": "",
+            "value": "ElikoSongBot",
             "required": true
         }
     },
