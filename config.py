@@ -7,5 +7,5 @@ class Config:
     BOT_OWNER = os.environ.get("ElikoAndMee")
     BOT_USERNAME = os.environ.get("ElikoSongBot")
     PLAYLIST_NAME = os.environ.get("𝙀𝙡𝙞𝙠𝙤 𝙋𝙡𝙖𝙮𝙡𝙞𝙨𝙩")
-    PLAYLIST_ID = int(os.environ.get("-1001822732870")
+    PLAYLIST_ID = int(os.environ.get("-1001822732870"))
 
