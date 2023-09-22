@@ -44,14 +44,7 @@ async def start(_, message: Message):
                         "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/Morfin_Music_Bot?startgroup=true"
                     )
                 ],
-                [
-                    InlineKeyboardButton(
-                        "🔊 Asistan", url="https://t.me/MorfinMusicAsistant"
-                    ),
-                    InlineKeyboardButton(
-                        "Qrup", url="https://t.me/MorphinChat"
-                    )
-                ],
+                
                 [
                     InlineKeyboardButton(
                         "🧩 Əmrlər" , callback_data= "cbbilgi"
@@ -68,24 +61,17 @@ async def start(_, message: Message):
 
 @bot.on_callback_query(filters.regex("cbbilgi"))
 async def cbbilgi(_, query: CallbackQuery):
-    await query.edit_message_text(" ❗ Qeyd:\nBotun aktiv işləməsi üçün bu üç yetki vermək lazımdır ⬇️\n- Mesaj silmə yetkisi.\n- Bağlantı ilə dəvət etmə yetkisi.\n- Səsli söhbəti yönətmə yetkisi.", 
+    await query.edit_message_text(".", 
     reply_markup=InlineKeyboardMarkup(
       [
-        [
-          InlineKeyboardButton(
-            "✨ Hərkəs üçün əmrlər", callback_data ="herkes")
-        ],
-        [
-          InlineKeyboardButton(
-            "👑 Admin əmrləri",callback_data ="admin")
-        ],
+        
         [
           InlineKeyboardButton(
             "🔄 Geri", callback_data="cbstart")
         ],
         [
           InlineKeyboardButton(
-            "Sahib 🇦🇿", url="https://t.me/BrendUIvi")
+            "Sahib 🇦🇿", url="https://t.me/nnn")
         ]
       ]
      ))
@@ -94,28 +80,21 @@ async def cbbilgi(_, query: CallbackQuery):
 
 @bot.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**Salam {query.from_user.mention} 🎵\nMə\nSəsli sohbətlərdə musiqi oxuyan botam. Ban yetkisiz, Səs yönətim yetki verib, Asistanı qrupa əlavə edin.\n\nSahibim👉 )**""",
+    await query.edit_message_text(f"""**Salam {query.from_user.mention} **""",
          reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/Morfin_Music_Bot?startgroup=true"
+                        "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/Morfint?startgroup=true"
                     )
                 ],
-                [
-                    InlineKeyboardButton(
-                        "🔊 Asistan", url="https://t.me/MorfinMusicAsistant"
-                    ),
-                    InlineKeyboardButton(
-                        "Qrup", url="https://t.me/MorphinChat"
-                    )
-                ],
+                
                 [
                     InlineKeyboardButton(
                         "🧩 Əmrlər" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
-                        "Rəsmi Kanal ", url=f"https://t.me/UlviiBlogs"
+                        "Rəsmi Kanal ", url=f"https://t.me/UBlogs"
                     )
                 ]
                 
