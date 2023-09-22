@@ -31,95 +31,101 @@ bot = Client(
 
 #start mesajı
 
-@bot.on_message(
-    filters.command(["start", "raven"]) & filters.private & ~filters.edited
-)
-async def start_(client: Client, message: Message):
-    await message.reply_text(
-        f"""**Salam {message.from_user.mention} 🎵\nMən Poseidon!\n
-● **Sənin üçün YouTube və digər platformalardan musiqi yükləmək üçün yaradılmışam.**
 
-● **İşlətmə qaydasını görmək üçün əmrlər butonuna tıkla.**
-""",
-        reply_markup=InlineKeyboardMarkup(
+@bot.on_message(command("start"))
+async def start(_, message: Message):
+                await message.reply_photo(
+                "https://te.legra.ph/file/7c24db2c84218935a8ac4.jpg",
+                caption=(f"""**Salam {message.from_user.mention} 🎵\nMən əsli söhbətlərdə musiqi oxuyan botam. Ban yetkisiz, Səs yetkisi verib, Asistanı qrupa əlavə edin.\n\nSahibim👉 )**"""),
+         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        " ᴘʟᴀʏʟɪ̇sᴛ ✨", 
-                        url=f"https://t.me/{Config.PLAYLIST_NAME}"
+                        "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/Morfin_Music_Bot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔧 əᴍʀʟəʀ" , callback_data= "cbbilgi"
+                        "🔊 Asistan", url="https://t.me/MorfinMusicAsistant"
                     ),
                     InlineKeyboardButton(
-                        "ʙʟᴏɢ 🌴",
-                        url=f"https://t.me/Nixhaad"
+                        "Qrup", url="https://t.me/MorphinChat"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🧑🏻‍💻 ᴏᴡɴᴇʀ",
-                        url=f"https://t.me/{Config.BOT_OWNER}"
+                        "🧩 Əmrlər" , callback_data= "cbbilgi"
+                    ),
+                    InlineKeyboardButton(
+                        "Rəsmi Kanal ", url=f"https://t.me/UlviiBlogs"
                     )
-                    
                 ]
                 
            ]
-        ), 
-    ) 
-    
-
-
+        ),
+    )
+  
 
 @bot.on_callback_query(filters.regex("cbbilgi"))
 async def cbbilgi(_, query: CallbackQuery):
-    await query.edit_message_text(f"""<b>Salam {query.from_user.mention}!\nBu botun əmrlər menyusu..🔧\n\n ● /song - Musiqi adı vəya YouTube linki (musiqi yükləmə)\n\n● /lyrics - Musiqi adı (mahnı sözləri)\n\n● /video - Video adı vəya YouTube linki (video yükləmə)\n\n</b>""",
+    await query.edit_message_text(" ❗ Qeyd:\nBotun aktiv işləməsi üçün bu üç yetki vermək lazımdır ⬇️\n- Mesaj silmə yetkisi.\n- Bağlantı ilə dəvət etmə yetkisi.\n- Səsli söhbəti yönətmə yetkisi.", 
     reply_markup=InlineKeyboardMarkup(
-             [
-                 [
-                     InlineKeyboardButton(
-                         "Ana Səhifə", callback_data="cbstart")
-                 ] 
-             ]
-         )
-         )
-
-# ~~~~~~~~~~~~~~~~~~~~~~ Poseidon song ~~~~~~~~~~~~~~~~~~~~~~
-
+      [
+        [
+          InlineKeyboardButton(
+            "✨ Hərkəs üçün əmrlər", callback_data ="herkes")
+        ],
+        [
+          InlineKeyboardButton(
+            "👑 Admin əmrləri",callback_data ="admin")
+        ],
+        [
+          InlineKeyboardButton(
+            "🔄 Geri", callback_data="cbstart")
+        ],
+        [
+          InlineKeyboardButton(
+            "Sahib 🇦🇿", url="https://t.me/BrendUIvi")
+        ]
+      ]
+     ))
+ 
+ 
 
 @bot.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
-    await query.edit_message_text(f"""**Salam {query.from_user.mention} 🎵\nMən Medusa !\n\n● **YouTube üzərindən musiqi yükləmə botu.**\n\n● **İstifadə qaydası üçün Əmrlər menyusunu açın.**""",
-        reply_markup=InlineKeyboardMarkup(
+    await query.edit_message_text(f"""**Salam {query.from_user.mention} 🎵\nMə\nSəsli sohbətlərdə musiqi oxuyan botam. Ban yetkisiz, Səs yönətim yetki verib, Asistanı qrupa əlavə edin.\n\nSahibim👉 )**""",
+         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        " ᴘʟᴀʏʟɪ̇sᴛ ✨", 
-                        url=f"https://t.me/{Config.PLAYLIST_NAME}"
+                        "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/Morfin_Music_Bot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔧 Əmrlər" , callback_data= "cbbilgi"
+                        "🔊 Asistan", url="https://t.me/MorfinMusicAsistant"
                     ),
                     InlineKeyboardButton(
-                        "ʙʟᴏɢ 🌴",
-                        url=f"https://t.me/Nixhaad"
+                        "Qrup", url="https://t.me/MorphinChat"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🧑🏻‍💻 ᴏᴡɴᴇʀ",
-                        url=f"https://t.me/{Config.BOT_OWNER}"
+                        "🧩 Əmrlər" , callback_data= "cbbilgi"
+                    ),
+                    InlineKeyboardButton(
+                        "Rəsmi Kanal ", url=f"https://t.me/UlviiBlogs"
                     )
-                    
                 ]
                 
            ]
-        ), 
-    ) 
+        ),
+                                 )
+
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~ Poseidon song ~~~~~~~~~~~~~~~~~~~~~~
 
 #alive mesajı#
 
