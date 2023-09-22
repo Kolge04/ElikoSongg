@@ -61,7 +61,7 @@ async def start(_, message: Message):
 
 @bot.on_callback_query(filters.regex("cbbilgi"))
 async def cbbilgi(_, query: CallbackQuery):
-    await query.edit_message_text(".", 
+    await query.edit_message_text("/song (musiqi adı)\n/video (video adı)\n/lyrics (musiqi adı)", 
     reply_markup=InlineKeyboardMarkup(
       [
         
